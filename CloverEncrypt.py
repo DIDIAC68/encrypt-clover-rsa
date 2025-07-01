@@ -100,7 +100,14 @@ def test_card(card_number, expiry_month, expiry_year, cvv):
     brand = "VISA"
     address_zip = "21502"
 
-    token_response = gerar_token_cartao(card_number, expiry_month, expiry_year, cvv, first6, last4, brand, address_zip)
+    clover = CloverEncrypt(card_number)
+    encrypted_pan = clover.get_encrypted_pan()
+    print(f"Cartao criptografado: {encrypted_pan}")
+
+    token_response = gerar_token_cartao(
+        card_number, expiry_month, expiry_year, cvv,
+        first6, last4, brand, address_zip
+    )
 
     return token_response
 
@@ -110,4 +117,4 @@ if __name__ == "__main__":
         card_number, expiry_month, expiry_year, cvv = card
         token_response = test_card(card_number, expiry_month, expiry_year, cvv)
         time.sleep(5)
-        print("[ℹ️] Resposta da Api da Clover:", token_response)
+        print("Resposta da Api da Clover:", token_response)
