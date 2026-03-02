@@ -33,7 +33,4 @@ Este projeto é apenas para fins educacionais e de integração. Nunca armazene 
 📄 Licença
 Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e contribuir.
 
-👤 Autor
-DIDIAC68
-🔗 GitHub: github.com/DIDIAC68
 🛠️ Tecnologias: Python, RSA, API, Criptografia, Clover
